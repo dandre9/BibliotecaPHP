@@ -5,19 +5,18 @@
         <script src="JS/javaScript.js"></script>
     </script>
     <meta charset="UTF-8"/>
-    <title>Biblioteca Login</title>
+    <title>Biblioteca Cadastro de Usuário</title>
 </head>
 <body align="center">
     <div align="left" style="position:absolute; width:300px; left:50%; top:50%; margin-top: -150px; margin-left:-150px;">
-        <h1 align="center">Sistema de acesso</h1>
+        <h1 align="center">Cadastro de Usuário</h1>
         <div style="background-color:#CCCCCC; padding:10px;">
             <form action="Principal.php" method="post">
-                Usuário:<br>
+                Nome de usuário:<br>
                 <input type="text" id="usuario" name="usuario" style="width:95%;"/><br>
-                Senha:<br>
+                Senha para acesso:<br>
                 <input type="password" name="senha" style="width:95%; margin-bottom: 10px;"/><br>
-                <input type="submit" value="Ir" style="width: 60px;"/>
-                <a href="cadastrousuario.php" style="margin-left: 130px;">Cadastre-se</a>
+                <input type="submit" value="Cadastrar"/>
             </form>
         </div>
     </div>
