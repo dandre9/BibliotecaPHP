@@ -1,0 +1,2 @@
+Base: [Biblioteca]
+Tabelas: [Livros(ID, Título, AutorID, StatusID);Autores(ID, Nome);Status(ID, Status)]
