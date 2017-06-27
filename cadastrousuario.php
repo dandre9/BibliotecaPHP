@@ -16,6 +16,7 @@
             Senha para acesso:<br>
             <input type="password" id="senhaCadastro" name="senhaCadastro" style="width:95%; margin-bottom: 10px;"/><br>
             <input type="button" id="submitCadastro" value="Cadastrar"/>
+            <a href="index.php" style="margin-left: 68px">Voltar para o login</a>
         </div>
     </div>
 </body>

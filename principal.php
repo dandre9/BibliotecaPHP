@@ -40,6 +40,7 @@
                             <a href="cadastrousuario.php" style="margin-left: 130px;">Cadastre-se</a>
                         </form>
                         <p style="color: red;">Usuário ou senha incorreto.</p>
+                        <p style="color: red;">Se não possui cadastro, clicar em 'Cadastre-se'.</p>
                     </div>
                 </div>
             </body>       
