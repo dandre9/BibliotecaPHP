@@ -11,13 +11,11 @@
     <div align="left" style="position:absolute; width:300px; left:50%; top:50%; margin-top: -150px; margin-left:-150px;">
         <h1 align="center">Cadastro de Usuário</h1>
         <div style="background-color:#CCCCCC; padding:10px;">
-            <form action="Principal.php" method="post">
-                Nome de usuário:<br>
-                <input type="text" id="usuario" name="usuario" style="width:95%;"/><br>
-                Senha para acesso:<br>
-                <input type="password" name="senha" style="width:95%; margin-bottom: 10px;"/><br>
-                <input type="submit" value="Cadastrar"/>
-            </form>
+            Nome de usuário:<br>
+            <input type="text" id="usuarioCadastro" name="usuarioCadastro" style="width:95%;"/><br>
+            Senha para acesso:<br>
+            <input type="password" id="senhaCadastro" name="senhaCadastro" style="width:95%; margin-bottom: 10px;"/><br>
+            <input type="button" id="submitCadastro" value="Cadastrar"/>
         </div>
     </div>
 </body>

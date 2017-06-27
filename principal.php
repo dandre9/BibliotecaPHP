@@ -9,27 +9,22 @@
     $mysql_user = 'root';
     $mysql_password = '';
 
-    @mysql_connect($mysql_host, $mysql_user, $mysql_password);
+    $link = @mysql_connect($mysql_host, $mysql_user, $mysql_password);
     mysql_set_charset('utf8');
 
     if (!@mysql_connect($mysql_host, $mysql_user, $mysql_password)) {
         die('Não foi possível conectar ao banco de dados.');
-    } else if (!@mysql_select_db('biblioteca')) {
+    } else if (!@mysql_select_db('biblioteca', $link)) {
         die('Não foi possível conectar ao banco de dados.');
     } else {
         //echo "Conexão efetuada com sucesso.<br>";
     }
 
-    $query = "SELECT * FROM `usuarios` WHERE Login LIKE '" . $_POST['usuario'] . "' AND Senha LIKE '" . $_POST['senha'] . "'";
-
+    $query = "SELECT * FROM `usuarios` WHERE Login LIKE '" . $_POST['usuario'] . "' AND Senha LIKE '" . md5($_POST['senha']) . "'";
+    $result = mysql_query($query);
     //echo $query . "<br>";
 
     if ($is_query_run = mysql_query($query)) {
-        //echo "Query executada.<br>";
-//            while ($query_execute = mysql_fetch_assoc($is_query_run)) {
-//                echo $query_execute['Login'] . " - " . $query_execute['Senha'] . "<br>";
-//            }
-
         if (@mysql_num_rows($result) == 0) {
             ?>
             <body align="center">
@@ -38,7 +33,7 @@
                     <div style="background-color:#CCCCCC; padding:10px;">                        
                         <form action="Principal.php" method="post">
                             Usuário:<br>
-                            <input type="text" id="usuario" name="usuario" style="width:95%;"/><br>
+                            <input type="text" name="usuario" style="width:95%;"/><br>
                             Senha:<br>
                             <input type="password" name="senha" style="width:95%; margin-bottom: 10px;"/><br>
                             <input type="submit" value="Ir" style="width: 60px;"/>
@@ -49,7 +44,7 @@
                 </div>
             </body>       
             <?php
-        }else{
+        } else {
             echo "TABELA COM LIVROS.";
         }
     } else {

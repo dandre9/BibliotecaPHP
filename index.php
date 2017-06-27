@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <script src="JS/jquery-3.2.1.min.js"></script>
-        <script src="JS/javaScript.js"></script>
     </script>
     <meta charset="UTF-8"/>
     <title>Biblioteca Login</title>
@@ -13,7 +11,7 @@
         <div style="background-color:#CCCCCC; padding:10px;">
             <form action="Principal.php" method="post">
                 Usuário:<br>
-                <input type="text" id="usuario" name="usuario" style="width:95%;"/><br>
+                <input type="text" name="usuario" style="width:95%;"/><br>
                 Senha:<br>
                 <input type="password" name="senha" style="width:95%; margin-bottom: 10px;"/><br>
                 <input type="submit" value="Ir" style="width: 60px;"/>
