@@ -47,7 +47,7 @@
         <?php } else {
             ?>
             <body align="center">
-                <table align="center" border='1' width="600px">
+                <table align="center" border='1' width="700px">
                     <tr>
                         <th>Título</th>
                         <th>Autor</th> 
@@ -56,7 +56,8 @@
                     <?php
                     $query = "SELECT `livros`.`ID` AS LivroID, `livros`.`Titulo`, `autores`.`Nome`, `status`.`Status`, `status`.`ID` AS StID FROM `livros`
 LEFT JOIN `autores` ON `livros`.`AutorID` = `autores`.`ID`
-LEFT JOIN `status` ON `livros`.`StatusID` = `status`.`ID`";
+LEFT JOIN `status` ON `livros`.`StatusID` = `status`.`ID`
+ORDER BY `livros`.`Titulo`";
                     $result = mysql_query($query);
                     if ($is_query_run = mysql_query($query)) {
                         while ($query_execute = mysql_fetch_assoc($is_query_run)) {
