@@ -54,19 +54,19 @@
                         <th>Situação</th>
                     </tr>
                     <?php
-                    $query = "SELECT livros.Titulo, autores.Nome, status.Status FROM `livros`
-LEFT JOIN autores ON livros.AutorID = autores.Nome
-LEFT JOIN status ON livros.StatusID = status.Status WHERE 1";
+                    $query = "SELECT `livros`.`Titulo`, `autores`.`Nome`, `status`.`Status` FROM `livros`
+LEFT JOIN `autores` ON `livros`.`AutorID` = `autores`.`ID`
+LEFT JOIN `status` ON `livros`.`StatusID` = `status`.`ID`";
                     $result = mysql_query($query);
                     if ($is_query_run = mysql_query($query)) {
                         while ($query_execute = mysql_fetch_assoc($is_query_run)) {
                             ?>
                             <tr align='left'>
                                 <td style='padding-right: 10px;'><?php echo $query_execute['Titulo'] ?></td>
-                                <td><?php echo $query_execute['AutorID'] ?></td> 
-                                <td><?php echo $query_execute['StatusID'] ?></td>
+                                <td><?php echo $query_execute['Nome'] ?></td> 
+                                <td><?php echo $query_execute['Status'] ?></td>
                             </tr>
-                        <?php
+                            <?php
                         }
                     }
                     ?>                    
