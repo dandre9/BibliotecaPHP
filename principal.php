@@ -47,14 +47,14 @@
         <?php } else {
             ?>
             <body align="center">
-                <table align="center" border='1'>
+                <table align="center" border='1' width="600px">
                     <tr>
                         <th>Título</th>
                         <th>Autor</th> 
                         <th>Situação</th>
                     </tr>
                     <?php
-                    $query = "SELECT `livros`.`Titulo`, `autores`.`Nome`, `status`.`Status` FROM `livros`
+                    $query = "SELECT `livros`.`ID` AS LivroID, `livros`.`Titulo`, `autores`.`Nome`, `status`.`Status`, `status`.`ID` AS StID FROM `livros`
 LEFT JOIN `autores` ON `livros`.`AutorID` = `autores`.`ID`
 LEFT JOIN `status` ON `livros`.`StatusID` = `status`.`ID`";
                     $result = mysql_query($query);
@@ -64,7 +64,7 @@ LEFT JOIN `status` ON `livros`.`StatusID` = `status`.`ID`";
                             <tr align='left'>
                                 <td style='padding-right: 10px;'><?php echo $query_execute['Titulo'] ?></td>
                                 <td><?php echo $query_execute['Nome'] ?></td> 
-                                <td><?php echo $query_execute['Status'] ?></td>
+                                <td <?php echo ($query_execute['StID'] == 2 ? "style='background-color: #ff8484;'" : "style='background-color: #8aff84;'"); ?>> <?php echo $query_execute['Status'] ?></td>
                             </tr>
                             <?php
                         }
