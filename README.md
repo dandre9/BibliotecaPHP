@@ -1,4 +1,4 @@
 # Sistema de Biblioteca em PHP
 
-O projeto È um sistema simples de biblioteca, onde o usu·rio entra atravÈs de um login e senha, procura por livros no banco de dados e, caso o livro estiver disponÌvel, pega ele emprestado.
-O usu·rio sabe que o livro esta disponÌvel ou n„o pois a tabela que lista os livros da biblioteca indica com cores os livros emprestados (vermelho) e os n„o emprestados (COR?).
+O projeto √© um sistema simples de biblioteca onde o usu√°rio faz um cadastro (caso n√£o houver), entra atrav√©s de um login e senha e consulta em uma tabela a disponibilidade dos livros para empr√©stimo.
+O usu√°rio sabe que o livro esta dispon√≠vel ou n√£o pois a tabela que lista os livros da biblioteca indica com cores os livros emprestados (vermelho) e os n√£o emprestados (verde).
